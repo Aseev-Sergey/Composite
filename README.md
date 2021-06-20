@@ -5,42 +5,45 @@
 
 Класс Component содержит общие для элементарного и составного объекта свойства
 
-Классы Begin, Operation, Solution, End хранят данные о рисуемом узле и отвечают за его отображение
+Классы Begin, Operation, Solution, End, ArrowLine, ArrowHead являются простыми элементами ("листьями")
 
 Класс Composite отвечает за агрегацию элементарных объектов
 ## Диаграмма классов
 
-![0](https://user-images.githubusercontent.com/85245803/121924796-e8ac2c80-cd44-11eb-8a69-d6d7a77ca1e1.png)
+![0](https://user-images.githubusercontent.com/85245803/122678112-0b7b8c80-d1ee-11eb-81be-3f8c23509ce3.png)
 
 ## Работа программы
 Запуск программы
 
-![1](https://user-images.githubusercontent.com/85245803/121924843-f497ee80-cd44-11eb-8695-dea98637ea8b.png)
+![1](https://user-images.githubusercontent.com/85245803/122678116-0fa7aa00-d1ee-11eb-81c9-800674d56e79.png)
 
-При выборе узла появляется возможность устанавливать уровни отображения объекта
+При выборе первого узла из списка появляется возможность добавлять к нему другие узлы по нажатию активных кнопок:
 
-Работа программы при выборе начального узла:
+![2](https://user-images.githubusercontent.com/85245803/122678171-3d8cee80-d1ee-11eb-97c0-437ad1d51d11.png)
+![3](https://user-images.githubusercontent.com/85245803/122678172-3e258500-d1ee-11eb-9466-28aec973bcdb.png)
+![4](https://user-images.githubusercontent.com/85245803/122678173-3e258500-d1ee-11eb-8865-7e31b6a7d3cc.png)
 
-![2](https://user-images.githubusercontent.com/85245803/121925007-25782380-cd45-11eb-9ee7-74b9e8dc1335.png)
-![3](https://user-images.githubusercontent.com/85245803/121925009-2610ba00-cd45-11eb-9581-56d828bb6f8b.png)
-![4](https://user-images.githubusercontent.com/85245803/121925014-2610ba00-cd45-11eb-9d0b-4fe0559ac845.png)
+Кнопка "Действие" добавляет узел действия к текущей схеме.
 
-Работа программы при выборе узла управления:
+![5](https://user-images.githubusercontent.com/85245803/122678523-f4d63500-d1ef-11eb-8aa1-b95863980ad7.png)
 
-![5](https://user-images.githubusercontent.com/85245803/121925073-34f76c80-cd45-11eb-8662-f3af594bbac1.png)
-![6](https://user-images.githubusercontent.com/85245803/121925077-35900300-cd45-11eb-9d74-04dbe7245c92.png)
-![7](https://user-images.githubusercontent.com/85245803/121925079-35900300-cd45-11eb-9979-8d82308b83eb.png)
+кнопка "Решение" добавляет узел решения к текущей схеме и позволяет выбрать тип узла: разветвляющийся (кнопка "Ветвление") или циклический (кнопка "Цикл").
 
-Работа программы при выборе узла решения:
+При выборе разветляющегося типа кнопки "-" и "+" отвечают за добавление узла действия по левой и правой стороне от узла решения соответственно. Кнопка "Завершение" скрепляет разветвление в одну линию и пользователь может выбирать, какой добавить следующий узел.
 
-![8](https://user-images.githubusercontent.com/85245803/121925120-3e80d480-cd45-11eb-9149-438551056d81.png)
-![9](https://user-images.githubusercontent.com/85245803/121925122-3f196b00-cd45-11eb-8081-92daae65274b.png)
-![10](https://user-images.githubusercontent.com/85245803/121925123-3fb20180-cd45-11eb-8968-45195546258c.png)
+![10](https://user-images.githubusercontent.com/85245803/122678674-77f78b00-d1f0-11eb-974d-60346ff26dcb.png)
+![11](https://user-images.githubusercontent.com/85245803/122678675-78902180-d1f0-11eb-90bb-96d5309b2f20.png)
+![12](https://user-images.githubusercontent.com/85245803/122678676-7928b800-d1f0-11eb-849f-fb5f5a0e55de.png)
+![13](https://user-images.githubusercontent.com/85245803/122678678-7928b800-d1f0-11eb-8f3b-ab379ed4730c.png)
+![8](https://user-images.githubusercontent.com/85245803/122678559-0d464f80-d1f0-11eb-8daa-c9412e19d5f3.png)
 
-Работа программы при выборе финального узла:
+При выборе циклического типа можно выбрать безтелесный или телесный вид цикла (кнопки "без тела" и "с телом" соответственно). После определения вида цикла пользователь может выбирать дальше, какой добавить следующий узел.
 
-![11](https://user-images.githubusercontent.com/85245803/121925150-4771a600-cd45-11eb-94e1-3e874b3b8581.png)
-![12](https://user-images.githubusercontent.com/85245803/121925152-480a3c80-cd45-11eb-9e6e-0c2d8fb75b56.png)
+![7](https://user-images.githubusercontent.com/85245803/122678571-12a39a00-d1f0-11eb-9b57-81c0dc75d015.png)
+
+Кнопка "Финальный" добавит финальный узел к схеме и завершит работу с добавлением узлов.
+
+![6](https://user-images.githubusercontent.com/85245803/122678579-19321180-d1f0-11eb-9010-9d4182e37dcd.png)
 
 Кнопка "Очистить" приводит программу в первоначальный вид.
 
