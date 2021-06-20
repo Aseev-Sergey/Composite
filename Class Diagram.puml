@@ -2,11 +2,12 @@
 
 package sample <<Folder>>{
 package composer <<Folder>>{
-class Arrows
 class Begin extends Component
 class End extends Component
 class Solution extends Component
 class Operation extends Component
+class ArrowLine  extends Component
+class ArrowHead extends Component
 abstract class Component
 class ComponentException extends java.lang.Exception
 class Composite extends Component
